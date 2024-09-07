@@ -1,0 +1,195 @@
+.container {
+  margin: 0 auto;
+  padding: 0 5%;
+}
+:root {
+  --back_color: #efefee;
+}
+/* Start navbar */
+.navbar {
+  background-color: var(--back_color);
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0px 2px 4px -2px;
+}
+.navbar .home li {
+  list-style-type: none;
+  font-family: sans-serif;
+}
+.navbar .home li a {
+  font-size: 17px;
+  font-weight: 300;
+  color: #303030;
+  text-decoration: none;
+}
+.navbar .home ul {
+  display: flex;
+  column-gap: 10px;
+  padding: 0px;
+}
+.navbar .title {
+  display: flex;
+  align-items: center;
+  font-family: sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+}
+.navbar .title span {
+  color: #aaaa9f;
+}
+.navbar .logo {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+@media (max-width: 760px) {
+  .navbar .home ul {
+    display: block;
+  }
+  .navbar .home li {
+    margin-bottom: 5px;
+  }
+  .navbar .title {
+    font-size: 27px;
+  }
+  .navbar .logo img {
+    height: 20px;
+  }
+  .navbar .logo {
+    column-gap: 5px;
+  }
+}
+@media (max-width: 550px) {
+  .navbar .title {
+    font-size: 22px;
+  }
+  .navbar .logo img {
+    display: block;
+    margin-bottom: 13px;
+  }
+  .navbar .logo {
+    display: block;
+    margin-top: 16px;
+  }
+}
+/* End navbar */
+
+/* Start body */
+/* Start Services */
+.myProfile {
+  background-color: var(--back_color);
+  margin-top: 2px;
+  padding-top: 40px;
+  display: grid;
+  /* grid-template-columns: repeat(8, 12%); */
+  grid-template-columns: repeat(8, 1 auto);
+  grid-template-rows: repeat(8, 92px);
+  column-gap: 55px;
+}
+
+.services {
+  grid-area: 2 / 1 / span 8 / span 2;
+}
+.myName {
+  grid-area: 1 / 3 / span 7 / span 3;
+}
+.description {
+  grid-area: 2 / 6 / span 7 / span 3;
+}
+.myProfile h2 {
+  font-family: Oswald;
+  font-size: 23px;
+  font-weight: 500;
+}
+.services div div {
+  display: flex;
+  align-items: center;
+}
+.services div div img {
+  background-color: white;
+  width: 14%;
+  margin-right: 2%;
+}
+.services div div p {
+  display: flex;
+  align-items: center;
+  font-family: "Oswald", sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+}
+@media (max-width: 770px) {
+  .services div div p {
+    font-size: 16px;
+  }
+}
+.myProfile div .para {
+  font-family: "Quattrocento", serif;
+  font-size: 16px;
+  color: #909090;
+}
+/* End Services */
+
+/* Start myname */
+
+.myProfile .myName h1 {
+  font-family: Oswald;
+  font-size: 45px;
+  font-weight: 500;
+}
+.myProfile .myName img {
+  width: 245px;
+  height: 298px;
+  border-radius: 24px 24px 0px 0px;
+  margin-top: 50px;
+}
+/* End myname */
+
+/* Start Description */
+
+.myProfile .description button {
+  background: #303030;
+  padding: 2%;
+  font-family: Quattrocento;
+  font-size: 24px;
+  color: #f6f6f6;
+}
+.myProfile .description .numbers {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  width: 179px;
+}
+/* End Description */
+@media (max-width: 400px) {
+  .myProfile .myName h1 {
+    font-size: 45px;
+  }
+  .myProfile .myName img {
+    width: 247px;
+    height: 255px;
+  }
+  .services div div img {
+    width: 14%;
+  }
+}
+hr {
+  display: none;
+}
+
+@media (max-width: 835px) {
+  .myProfile .myName h1 {
+    font-size: 31px;
+  }
+  .myProfile .myName img {
+    width: 173px;
+    height: 253px;
+  }
+}
+@media (max-width: 600px) {
+  .myProfile {
+    display: block;
+  }
+  .myProfile hr {
+    display: block;
+  }
+}
